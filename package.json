@@ -1,0 +1,45 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saikojosh/Deep-Sort.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saikojosh/Deep-Sort/issues"
+  },
+  "name": "deep-iterate",
+  "version": "0.0.1",
+  "description": "A handy array sorting utility for comparing arrays of objects.",
+  "keywords": [
+    "deep",
+    "sort",
+    "sorting",
+    "array",
+    "arrays",
+    "object",
+    "objects"
+  ],
+  "main": "deepSort.js",
+  "scripts": {},
+  "author": "Josh Cole <hello@joshuacole.me> (http://www.JoshuaCole.me)",
+  "contributors": [
+    {
+      "name": "Josh Cole",
+      "email": "hello@joshuacole.me"
+    }
+  ],
+  "dependencies": {
+    "deep-property": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-recombix": "latest",
+    "eslint-plugin-filenames": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-node": "^4.2.1",
+    "eslint-plugin-promise": "latest"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  }
+}
