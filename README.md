@@ -2,7 +2,7 @@
 A handy array sorting utility for comparing arrays of objects.
 
 ## Quick Start
-You can sort an array of objects based on one of its (nested) properties. Sorting behaviour is the same as `Array.sort()`. See the `/examples` directory for some working examples.
+You can sort an array of objects based on one of its (nested) properties. Sorting behaviour is the same as `Array.sort()`. Arrays are sorted in place (the original array is mutated) and the result is returned. See the `/examples` directory for some working examples.
 
 ```javascript
 const deepSort = require(`deep-sort`);
