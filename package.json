@@ -6,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/saikojosh/Deep-Sort/issues"
   },
-  "name": "deep-iterate",
+  "name": "deep-sort",
   "version": "0.0.1",
   "description": "A handy array sorting utility for comparing arrays of objects.",
   "keywords": [
