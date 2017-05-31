@@ -7,7 +7,7 @@
     "url": "https://github.com/saikojosh/Deep-Sort/issues"
   },
   "name": "deep-sort",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A handy array sorting utility for comparing arrays of objects.",
   "keywords": [
     "deep",
