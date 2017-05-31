@@ -14,11 +14,16 @@ function executeDeepSort (array, path, order = `asc`, comparator = null) {
 	const sortMethod = (typeof comparator === `function` ? `comparator` : order.toLowerCase());
 
 	return array.sort((itemA, itemB) => {
-		const propA = props.get(itemA, path);
-		const propB = props.get(itemB, path);
+		let propA;
+		let propB;
+
+		if (path) {
+			propA = props.get(itemA, path);
+			propB = props.get(itemB, path);
+		}
 
 		switch (sortMethod) {
-			case `comparator`: return comparator(propA, propB, itemA, itemB);
+			case `comparator`: return comparator(itemA, itemB, propA, propB);
 
 			case `asc`:
 			case 1:
