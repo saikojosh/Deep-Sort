@@ -27,12 +27,33 @@ If you need more control you can pass a comparator function to the `deepSort.cus
 * **+1** - Sort itemA higher than itemB (DESC).
 
 ```javascript
-deepSort.custom(myArray, `nested.deeper.text`, (propA, propB, itemA, itemB) => {
+// Pull out a specific property by passing in a path.
+deepSort.custom(myArray, `nested.deeper.text`, (itemA, itemB, propA, propB) => {
 
+	// itemA -> myArray[0]
+	// itemB -> myArray[1]
 	// propA -> AAA
 	// propB -> BBB
+
+	return an integer;
+
+});
+
+// Or just receive the array if you aren't fussed about a particular property.
+deepSort.custom(myArray, null, (itemA, itemB) => {
+
 	// itemA -> myArray[0]
 	// itemB -> myArray[1]
 
+	return an integer;
+
 });
 ```
+
+## API Overview
+
+### deepSort(array, path, order = 'asc')
+Sort the given array by the property at the given path, in the order specified.
+
+### deepSort.custom(array, path = null, comparator)
+Sort the given array using the result of the comparator function. Specify a path if you wish to expose a specific property to the comparator function, or a falsy value otherwise.
