@@ -9,11 +9,11 @@ const props = require(`deep-property`);
 /*
  * Execute the sorting.
  */
-function executeDeepSort (array, path, order = `asc`, comparator = null) {
+function executeDeepSort (iterable, path, order = `asc`, comparator = null) {
 
 	const sortMethod = (typeof comparator === `function` ? `comparator` : order.toLowerCase());
 
-	return array.sort((itemA, itemB) => {
+	return iterable.sort((itemA, itemB) => {
 		let propA;
 		let propB;
 
@@ -40,15 +40,15 @@ function executeDeepSort (array, path, order = `asc`, comparator = null) {
 }
 
 /*
- * Sort the given array using the given object path and ordering flag.
+ * Sort the given iterable using the given object path and ordering flag.
  */
-module.exports = function deepSort (array, path, order) {
-	return executeDeepSort(array, path, order);
+module.exports = function deepSort (iterable, path, order) {
+	return executeDeepSort(iterable, path, order);
 };
 
 /*
  *
  */
-module.exports.custom = function deepSortCustom (array, path, comparator) {
-	return executeDeepSort(array, path, null, comparator);
+module.exports.custom = function deepSortCustom (iterable, path, comparator) {
+	return executeDeepSort(iterable, path, null, comparator);
 };
