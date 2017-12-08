@@ -8,7 +8,7 @@
   },
   "name": "deep-sort",
   "version": "0.1.2",
-  "description": "Sort arrays of objects by property (including nested properties).",
+  "description": "Sort arrays of objects or dictionaries of objects by property (including nested properties).",
   "keywords": [
     "deep",
     "sort",
