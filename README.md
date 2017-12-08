@@ -61,7 +61,19 @@ If you need more control you can pass a comparator function to the `deepSort.cus
 * **+1** - Sort itemA higher than itemB (DESC).
 
 ```javascript
-deepSort.custom(iterable, resources => {
+// Arrays.
+deepSort.custom(array, resources => {
+
+	// resources.itemA    -> the next item in the iterable.
+	// resources.itemB    -> the next + 1 item in the iterable.
+	// resources.iterable -> the input iterable (array or dictionary).
+
+	return an integer;
+
+});
+
+// Objects.
+deepSort.custom(array, `someKeyProperty`, resources => {
 
 	// resources.itemA    -> the next item in the iterable.
 	// resources.itemB    -> the next + 1 item in the iterable.
@@ -74,7 +86,7 @@ deepSort.custom(iterable, resources => {
 If you pass a comparator function to `deepSort()`, `deepSort.array()` or `deepSort.object()` you get access to all the input arguments:
 
 ```javascript
-deepSort.custom(iterable, resources => {
+function comparator (resources) {
 
 	// resources.propA         -> the next item property in the iterable (specified by sortProperty).
 	// resources.propB         -> the next + 1 item property in the iterable (specified by sortProperty).
