@@ -7,7 +7,7 @@
 const props = require(`deep-property`);
 
 /*
- * Execute the sorting.
+ * Execute the sorting algorithm.
  */
 function executeDeepSort (iterable, path, order = `asc`, comparator = null) {
 
@@ -47,7 +47,7 @@ module.exports = function deepSort (iterable, path, order) {
 };
 
 /*
- *
+ * Sort the given iterable using the given object path and custom comparator function.
  */
 module.exports.custom = function deepSortCustom (iterable, path, comparator) {
 	return executeDeepSort(iterable, path, null, comparator);
