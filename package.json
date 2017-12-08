@@ -8,7 +8,7 @@
   },
   "name": "deep-sort",
   "version": "0.1.1",
-  "description": "A handy array sorting utility for comparing arrays of objects.",
+  "description": "Sort arrays of objects by property (including nested properties).",
   "keywords": [
     "deep",
     "sort",
@@ -16,7 +16,16 @@
     "array",
     "arrays",
     "object",
-    "objects"
+    "objects",
+    "hash",
+    "hashes",
+    "dictionary",
+    "dictionaries",
+    "property",
+    "properties",
+    "key",
+    "keys",
+    "sub"
   ],
   "main": "deepSort.js",
   "scripts": {},
