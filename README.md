@@ -63,9 +63,9 @@ If you need more control you can pass a comparator function to the `deepSort.cus
 ```javascript
 deepSort.custom(iterable, resources => {
 
-	// resources.itemA		-> the next item in the iterable.
-	// resources.itemB		-> the next + 1 item in the iterable.
-	// resources.iterable	-> the input iterable (array or dictionary).
+	// resources.itemA    -> the next item in the iterable.
+	// resources.itemB    -> the next + 1 item in the iterable.
+	// resources.iterable -> the input iterable (array or dictionary).
 
 	return an integer;
 
@@ -73,17 +73,17 @@ deepSort.custom(iterable, resources => {
 ```
 If you pass a comparator function to `deepSort()`, `deepSort.array()` or `deepSort.object()` you get access to all the input arguments:
 
-```
+```javascript
 deepSort.custom(iterable, resources => {
 
-	// resources.propA					-> the next ite property in the iterable (specified by sortProperty).
-	// resources.propB					-> the next + 1 item property in the iterable (specified by sortProperty).
-	// resources.itemA					-> the next item in the iterable.
-	// resources.itemB					-> the next + 1 item in the iterable.
-	// resources.iterable				-> the input iterable (array or dictionary).
-	// resources.keyProperty		-> the input keyProperty (array or dictionary).
-	// resources.sortProperty		-> the input sortProperty (array or dictionary).
-	// resources.sortDirection	-> the input sortDirection (array or dictionary).
+	// resources.propA         -> the next item property in the iterable (specified by sortProperty).
+	// resources.propB         -> the next + 1 item property in the iterable (specified by sortProperty).
+	// resources.itemA         -> the next item in the iterable.
+	// resources.itemB         -> the next + 1 item in the iterable.
+	// resources.iterable      -> the input iterable (array or dictionary).
+	// resources.keyProperty   -> the input keyProperty (array or dictionary).
+	// resources.sortProperty  -> the input sortProperty (array or dictionary).
+	// resources.sortDirection -> the input sortDirection (array or dictionary).
 
 	return an integer;
 
