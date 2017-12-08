@@ -99,7 +99,7 @@ function comparator (resources) {
 
 	return an integer;
 
-});
+}
 ```
 
 ## API Overview
