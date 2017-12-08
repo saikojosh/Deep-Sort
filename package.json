@@ -7,7 +7,7 @@
     "url": "https://github.com/saikojosh/Deep-Sort/issues"
   },
   "name": "deep-sort",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sort arrays of objects or dictionaries of objects by property (including nested properties).",
   "keywords": [
     "deep",
