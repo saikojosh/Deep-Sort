@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- * EXAMPLE: Basic.
+ * EXAMPLE: Array.
  */
 
 /* eslint no-console: 0 */
@@ -18,9 +18,9 @@ const output = (array) => {
 };
 
 const myArray = [
-	{ id: 1, nested: { time1: 111, time2: 749, deeper: { text: `AAA` } } },
-	{ id: 2, nested: { time1: 222, time2: 284, deeper: { text: `BBB` } } },
-	{ id: 3, nested: { time1: 333, time2: 923, deeper: { text: `CCC` } } },
+	{ id: 1, nested: { time: 111, deeper: { text: `AAA` } } },
+	{ id: 2, nested: { time: 222, deeper: { text: `BBB` } } },
+	{ id: 3, nested: { time: 333, deeper: { text: `CCC` } } },
 ];
 
 console.log(`\nid@asc ->`);
@@ -37,9 +37,5 @@ output(deepSort(myArray, `nested.deeper.text`, `desc`));
 
 console.log(`\nnested.time@desc ->`);
 output(
-	deepSort.custom(
-		myArray,
-		`nested.time1`,
-		(propA, propB, itemA, itemB) => (propB + itemB.nested.time2) - (propA + itemA.nested.time2)
-	)
+	deepSort.custom(myArray, ({ itemA, itemB }) => itemB.nested.time - itemA.nested.time)
 );
